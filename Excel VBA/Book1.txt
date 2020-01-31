@@ -1,0 +1,14 @@
+Sub macro()
+    Dim z As Variant
+    num = Array(100, 80, 20) 'For each n in num Next n
+    Dim i As Integer
+    For i = 1 To 3
+    Cells(i, 1).Value = num(i - 1)
+    If Cells(i, 1) = 100 Then
+        MsgBox ("GREAT!")
+    ElseIf Cells(i, 1) >= 80 Then
+        MsgBox ("GOOD")
+    Else: MsgBox ("NG")
+    End If
+    Next i
+End Sub
