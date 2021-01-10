@@ -1,0 +1,34 @@
+while true
+	ifb chkimg("revive.bmp")
+		call revive.uws
+	endif
+	ifb chkimg("revive2.bmp")
+		call revive2.uws
+	endif
+	ifb chkimg("re.bmp",1,200,500,330,570)
+	BTN(LEFT,CLICK,230,700)
+		t=gettime()
+		while ((gettime()-t)<=4)
+		ifb chkimg("dy.bmp",1,0,111,320,685)
+		BTN(LEFT,CLICK,100,390)
+		break
+		endif
+		wend
+	endif
+	str = "http://game.granbluefantasy.jp/#result_multi/"
+SLEEP(1)
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,DOWN)
+KBD(VK_C,CLICK)
+KBD(VK_CTRL,UP)
+url = GETSTR(0)
+ifb POS(str,url)
+	break
+endif
+wend
+BTN(LEFT,CLICK,230,700)
+SLEEP(3)
+BTN(LEFT,CLICK,187,80)
+SLEEP(3)

@@ -1,0 +1,41 @@
+while true
+BTN(LEFT,CLICK,940,80)
+while true
+SLEEP(1)
+ifb chkimg("黄龍.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+
+while true
+r = PEEKCOLOR(85, 114, COL_R)
+	if	r=72
+BTN(LEFT,CLICK,240,540)
+break
+endif
+wend
+
+call APR.uws
+call 認証.uws
+
+while true
+r = PEEKCOLOR(23, 380, COL_R)//fullauto
+if	r=96
+	BTN(LEFT,CLICK,37,385)
+	break
+endif
+wend
+
+SLEEP(27)
+BTN(LEFT,CLICK,250,700)
+while true
+r = PEEKCOLOR(44, 110, COL_R)
+if	r=31
+	break
+endif
+wend
+
+wend

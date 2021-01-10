@@ -1,0 +1,30 @@
+t=gettime()
+while ((gettime()-t)<=4)
+ifb chkimg("quest.bmp")
+BTN(LEFT,CLICK,160,480)
+	while true
+		ifb chkimg("quest1.bmp")
+			BTN(LEFT,CLICK,130,140)
+			SLEEP(2)
+			call AP.uws
+		break
+		endif
+	wend
+BTN(LEFT,CLICK,920,80)
+while true
+ifb chkimg("sup.bmp")
+	break
+endif
+wend
+BTN(LEFT,CLICK,163,363)
+SLEEP(1)
+//BTN(LEFT,CLICK,240,540)
+while true
+ifb chkimg("ok.bmp")
+	BTN(LEFT,CLICK,240,540)
+	break
+endif
+wend
+break
+endif
+wend

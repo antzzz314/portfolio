@@ -1,0 +1,17 @@
+CALL ChkImgX.uws
+
+startup_chkimgx()
+try
+	if chkimgx("APP.bmp",1,40,40,600,800,1,1)
+		BTN(LEFT,CLICK,1102,491)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,1109,440)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,1119,531)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,1116,506)
+		SLEEP(0.6)
+	endif
+finally
+	shutdown_chkimgx()
+endtry

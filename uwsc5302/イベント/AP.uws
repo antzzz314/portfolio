@@ -1,0 +1,11 @@
+ifb chkimg("APP.bmp")
+	call aaaa.uws
+	//BTN(LEFT,CLICK,216,464)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,216,413)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,216,500)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,160,500)
+	//SLEEP(0.5)
+endif

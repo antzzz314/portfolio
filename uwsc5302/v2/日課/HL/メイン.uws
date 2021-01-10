@@ -1,0 +1,49 @@
+SENDSTR(0,"http://game.granbluefantasy.jp/#quest/multi/0v")
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_ENTER,DOWN)
+KBD(VK_ENTER,UP)
+SLEEP(2)
+BTN(LEFT,CLICK,230,276)
+SLEEP(1)
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,294)
+call ティアマト.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,334)
+call コロッサス.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,385)
+call リヴァ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,441)
+call ユグ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,500)
+call シュバ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,540)
+call セレ.uws
+next

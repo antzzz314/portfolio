@@ -1,0 +1,14 @@
+SLEEP(1.5)
+call AP.uws
+while true
+SLEEP(1.5)
+ifb chkimg("1.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,240,532)
+call battle.uws

@@ -1,0 +1,23 @@
+while true
+ifb chkimg("kura.bmp")
+	BTN(LEFT,CLICK,200,500)
+	SLEEP(1)
+	BTN(LEFT,CLICK,100,500)
+	SLEEP(1)
+	BTN(LEFT,CLICK,37,370)
+	SLEEP(1)
+	BTN(LEFT,CLICK,50,500)
+	while true
+	ifb chkimg("dis.bmp")
+		BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+		break		
+	endif
+	while true
+	ifb chkimg("dis2.bmp")
+		BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+		break		
+	endif
+	SLEEP(0.5)
+	BTN(LEFT,CLICK,250,370)//AT
+endif
+wend

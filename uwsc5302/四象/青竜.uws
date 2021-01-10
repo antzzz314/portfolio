@@ -1,0 +1,24 @@
+SLEEP(0.5)
+BTN(LEFT,CLICK,251,505)//四象4
+SLEEP(1.5)
+call AP.uws
+while true
+SLEEP(1)
+ifb chkimg("bu/1.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,220,538)
+call bat.uws
+BTN(LEFT,CLICK,100,446)
+BTN(LEFT,CLICK,100,446)//ミムメモ
+SLEEP(0.8)
+BTN(LEFT,CLICK,97,484)
+SLEEP(1.4)
+BTN(LEFT,CLICK,207,374)//攻撃
+call bat1.uws
+BTN(LEFT,CLICK,187,80)

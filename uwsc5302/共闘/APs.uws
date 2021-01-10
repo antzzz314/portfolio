@@ -1,0 +1,11 @@
+ifb chkimg("APP.bmp")
+	call siru.uws
+	//BTN(LEFT,CLICK,1102,470)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,1109,420)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,1119,508)
+	//SLEEP(0.6)
+	//BTN(LEFT,CLICK,1116,508)
+	//SLEEP(0.6)
+endif

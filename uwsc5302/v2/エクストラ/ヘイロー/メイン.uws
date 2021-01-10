@@ -1,0 +1,67 @@
+t=gettime()
+while true
+ifb chkimg("hell.bmp")
+	BTN(LEFT,CLICK,295,400)
+	SLEEP(1)
+	BTN(LEFT,CLICK,295,400)
+	SLEEP(3)
+	BTN(LEFT,CLICK,163,363)
+	SLEEP(2)
+	BTN(LEFT,CLICK,240,590)
+	t=gettime()
+	while ((gettime()-t)<=6)
+		ifb chkimg("dy.bmp",1,0,111,320,685)
+		BTN(LEFT,CLICK,100,390)
+		break
+		endif
+	wend
+	while true
+		ifb chkimg("re.bmp",1,200,500,330,570)
+		BTN(LEFT,CLICK,230,700)
+		t=gettime()
+		while ((gettime()-t)<=4)
+			ifb chkimg("dy.bmp",1,0,111,320,685)
+				BTN(LEFT,CLICK,100,390)
+				break
+			endif
+		wend
+		endif
+	str = "http://game.granbluefantasy.jp/#result/"
+	SLEEP(1)
+	BTN(LEFT,CLICK,280,60)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_A,CLICK)
+	KBD(VK_CTRL,UP)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_C,CLICK)
+	KBD(VK_CTRL,UP)
+	url = GETSTR(0)
+	ifb POS(str,url)
+		break
+	endif
+	wend
+BTN(LEFT,CLICK,250,700)
+SLEEP(2)
+endif
+BTN(LEFT,CLICK,114,200)
+KBD(VK_SPACE,CLICK)
+SLEEP(0.5)
+BTN(LEFT,CLICK,264,364)
+SLEEP(1)
+BTN(LEFT,CLICK,283,470)
+SLEEP(2)//1.5
+call AP.uws
+BTN(LEFT,CLICK,163,363)
+SLEEP(1)
+BTN(LEFT,CLICK,240,580)
+SLEEP(7)//6
+call 認証.uws
+BTN(LEFT,CLICK,280,420)
+SLEEP(3)
+BTN(LEFT,CLICK,30,420)
+SLEEP(16)
+BTN(LEFT,CLICK,250,700)
+SLEEP(5)
+BTN(LEFT,CLICK,250,700)
+SLEEP(2)
+wend

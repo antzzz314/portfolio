@@ -1,0 +1,6 @@
+while true
+r = PEEKCOLOR(216, 121, COL_R)
+if r=158
+	break
+endif
+wend

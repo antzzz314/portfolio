@@ -1,0 +1,6 @@
+t=gettime()
+while ((gettime()-t)<=2)
+ifb chkimg("sima.bmp")
+	call guard.uws
+endif
+wend

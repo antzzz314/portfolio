@@ -1,0 +1,5 @@
+while true
+ifb chkimg("suwa.bmp")
+	msgbox("ok")
+endif
+wend

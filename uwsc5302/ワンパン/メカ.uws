@@ -1,0 +1,33 @@
+while true
+r = PEEKCOLOR(216, 121, COL_R)
+if r=158
+	break
+endif
+wend
+BTN(LEFT,CLICK,50,500)
+BTN(LEFT,CLICK,50,500)
+SLEEP(1)
+BTN(LEFT,CLICK,100,500)
+BTN(LEFT,CLICK,100,500)
+SLEEP(1)
+BTN(LEFT,CLICK,150,500)
+BTN(LEFT,CLICK,150,500)
+SLEEP(0.5)
+textblock aaaa
+BTN(LEFT,CLICK,40,380)
+SLEEP(1)
+BTN(LEFT,CLICK,100,500)
+BTN(LEFT,CLICK,100,500)
+SLEEP(1)
+BTN(LEFT,CLICK,150,500)
+BTN(LEFT,CLICK,150,500)
+SLEEP(0.5)
+endtextblock
+BTN(LEFT,CLICK,260,380)
+t=gettime()
+while ((gettime()-t)<=10)
+ifb chkimg("re.bmp")
+	break
+endif
+wend
+SLEEP(1)

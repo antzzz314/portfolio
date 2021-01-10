@@ -1,0 +1,22 @@
+id = GETID("グランブルーファンタジー[AndApp版]")
+CTRLWIN(id, MAX)
+
+// finallyを必ず実行してもらう
+OPTION OPTFINALLY
+
+// ChkImgX関数をインクルード
+CALL ChkImgX.uws
+
+startup_chkimgx()
+try
+	// デバッグ用にダンプをONにする
+	chkimgx_option(true, false)
+
+	// 画像サイズを取得
+	dim w, h
+	imagesize("bu/6d.bmp", w, h)
+	print "画像 幅:" + w + "px,高さ:" + h + "px"
+
+finally
+	shutdown_chkimgx()
+endtry

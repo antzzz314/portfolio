@@ -1,0 +1,22 @@
+SLEEP(2)
+BTN(LEFT,CLICK,230,520)
+while true
+ifb chkimg("s.bmp")
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+break
+endif
+wend
+SLEEP(1.5)
+call AP.uws
+while true
+SLEEP(1)
+ifb chkimg("黄龍.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,240,540)
+call battle.uws

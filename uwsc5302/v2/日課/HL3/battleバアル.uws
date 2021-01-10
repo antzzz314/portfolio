@@ -1,0 +1,36 @@
+SLEEP(8)
+BTN(LEFT,CLICK,76,328)
+BTN(LEFT,CLICK,34,390)
+while true
+	ifb chkimg("re.bmp",1,200,500,330,570)
+	BTN(LEFT,CLICK,230,700)
+	SLEEP(5)
+	BTN(LEFT,CLICK,76,328)
+	BTN(LEFT,CLICK,34,390)
+	endif
+str = "http://game.granbluefantasy.jp/#result_multi/"
+SLEEP(1)
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,DOWN)
+KBD(VK_C,CLICK)
+KBD(VK_CTRL,UP)
+url = GETSTR(0)
+ifb POS(str,url)
+	break
+endif
+wend
+BTN(LEFT,CLICK,230,700)
+SLEEP(3)
+SENDSTR(0,"http://game.granbluefantasy.jp/#quest/multi/0v")
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_ENTER,DOWN)
+KBD(VK_ENTER,UP)
+SLEEP(2)

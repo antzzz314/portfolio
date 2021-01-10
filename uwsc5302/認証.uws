@@ -1,0 +1,3 @@
+ifb chkimg("認証.bmp")
+	msgbox("ok")
+endif

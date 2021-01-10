@@ -1,0 +1,4 @@
+ifb chkimg("re.bmp")
+	msgbox("ok")
+		BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+endif

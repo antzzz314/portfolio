@@ -1,0 +1,39 @@
+mailfrom = "kenmow314@gmail.com"　// 送信元
+mailto = "hima314@gmail.com"　// 送信先
+subject = "画像認証"// メールタイトル
+body = ""// メール本文
+ 
+authflag = true// SMTP認証使用の有無 Trueが使用 Falseが不使用
+authid = "kenmow314@gmail.com"// 送信元
+authps = "Du53rq&AQbXF*stxw4h&0qOTT@OOxm"// gmailのパスワード
+sslflag = true// 暗号化された接続(SSL)使用の有無 Trueが使用 Falseが不使用
+ 
+smtpserver = "smtp.gmail.com" // 例)smtp.gmail.com
+smtpserverport = 465 // サーバーのポート番号　例はGmailのもの
+ 
+Dim objEmail = CreateOleObj("CDO.Message")
+ 
+objEmail.From = mailfrom
+objEmail.To = mailto
+objEmail.Subject = subject
+objEmail.Textbody = body
+ 
+schemas = "http://schemas.microsoft.com/cdo/configuration/"
+objEmail.Configuration.Fields.Item(schemas + "sendusing") = 2
+objEmail.Configuration.Fields.Item(schemas + "smtpserver") = smtpserver
+objEmail.Configuration.Fields.Item(schemas + "smtpserverport") = smtpserverport
+ 
+//SMTP認証を利用する場合
+ifb authflag
+    objEmail.Configuration.Fields.Item(schemas + "smtpauthenticate") = true
+    objEmail.Configuration.Fields.Item(schemas + "sendusername") = authid
+    objEmail.Configuration.Fields.Item(schemas + "sendpassword") = authps
+endif
+ 
+//暗号化された接続(SSL)を利用する場合
+if sslflag then objEmail.Configuration.Fields.Item(schemas + "smtpusessl") = true
+ 
+objEmail.Configuration.Fields.Update
+COM_ERR_IGN
+objEmail.Send
+COM_ERR_RET

@@ -1,0 +1,37 @@
+// finallyを必ず実行してもらう
+OPTION OPTFINALLY
+
+// ChkImgX関数をインクルード
+CALL ChkImgX.uws
+CALL result.uws
+
+startup_chkimgx()
+try
+	//dim poker[14]
+	public p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14
+	dim c[4]
+	id = GETID("グランブルーファンタジー[AndApp版]")
+	CTRLWIN(id, MAX)
+	poker = poker()
+for i = 0 to length(poker) - 1
+	if poker[i]=1 then p1=p1+1
+	if poker[i]=2 then p2=p2+1
+	if poker[i]=3 then p3=p3+1
+	if poker[i]=4 then p4=p4+1
+	if poker[i]=5 then p5=p5+1
+	if poker[i]=6 then p6=p6+1
+	if poker[i]=7 then p7=p7+1
+	if poker[i]=8 then p8=p8+1
+	if poker[i]=9 then p9=p9+1
+	if poker[i]=10 then p10=p10+1
+	if poker[i]=11 then p11=p11+1
+	if poker[i]=12 then p12=p12+1
+	if poker[i]=13 then p13=p13+1
+	if poker[i]=14 then p14=p14+1
+next
+for i = 0 to length(poker) - 1
+	if poker[i]=>2 then c[i]=1
+next
+finally
+	shutdown_chkimgx()
+endtry

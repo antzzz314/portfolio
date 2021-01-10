@@ -1,0 +1,4 @@
+ifb chkimg("確認.bmp")
+	call mail.uws
+	exitexit
+endif

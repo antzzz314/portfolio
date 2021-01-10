@@ -1,0 +1,64 @@
+BTN(LEFT,CLICK,805,740)
+id1 = getid(GET_ACTIVE_WIN)
+ACW(id1,0,1,500,730)
+while true
+
+while true
+r = PEEKCOLOR(113, 122, COL_R)
+if	r=152
+	SLEEP(1)
+	break
+endif
+wend
+
+call イベント.uws
+BTN(LEFT,CLICK,62,510)
+while true
+r = PEEKCOLOR(53, 481, COL_R)
+if	r=35
+	break
+endif
+wend
+BTN(LEFT,CLICK,62,521)
+SLEEP(2)
+call AP.uws
+while true
+r = PEEKCOLOR(33, 190, COL_R)
+if	r=217
+	break
+endif
+wend
+BTN(LEFT,CLICK,142,356)
+SLEEP(1)
+call 認証.uws
+
+t=GETTIME()
+hh2= G_TIME_HH2
+if hh2=21
+	exitexit
+endif
+
+BTN(LEFT,CLICK,240,532)
+while true
+ifb chkimg("dy.bmp")
+	BTN(LEFT,CLICK,240,532)
+	break
+endif
+wend
+while true
+ifb chkimg("re.bmp")
+	BTN(LEFT,CLICK,240,532)
+	break
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,187,80)
+//SLEEP(1.5)
+while true
+r = PEEKCOLOR(73, 147, COL_R)
+if	r=91
+	break
+endif
+wend
+BTN(LEFT,CLICK,187,80)
+wend

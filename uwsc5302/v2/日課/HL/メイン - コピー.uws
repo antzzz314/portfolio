@@ -1,0 +1,24 @@
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,385)
+call リヴァ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,441)
+call ユグ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,500)
+call シュバ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+BTN(LEFT,CLICK,290,540)
+call セレ.uws
+next

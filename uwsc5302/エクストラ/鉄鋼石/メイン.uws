@@ -1,0 +1,46 @@
+while true
+BTN(LEFT,CLICK,920,80)
+//SLEEP(2)
+while true
+ifb chkimg("sup.bmp")
+	break
+endif
+wend
+BTN(LEFT,CLICK,163,363)
+SLEEP(1)
+//BTN(LEFT,CLICK,240,540)
+while true
+ifb chkimg("ok.bmp")
+	BTN(LEFT,CLICK,240,540)
+	break
+endif
+wend
+call APR.uws
+call 認証.uws
+//SLEEP(7)
+//BTN(LEFT,CLICK,280,360)
+while true
+for xxx = 340 to 500
+r = PEEKCOLOR(140, xxx, COL_R)
+if	r=61
+	BTN(LEFT,CLICK,140,xxx)
+	break 2
+endif
+next
+wend
+
+while true
+r = PEEKCOLOR(278, 117, COL_R)
+if	r=233
+	SLEEP(2)
+	BTN(LEFT,CLICK,37,370)
+	break
+endif
+wend
+
+while true
+ifb chkimg("res.bmp")
+	break
+endif
+wend
+wend

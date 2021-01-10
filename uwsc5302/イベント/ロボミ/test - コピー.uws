@@ -1,0 +1,6 @@
+gettime()
+while true
+SLEEP(1)
+hh2= G_TIME_SS
+print hh2
+wend 

@@ -1,0 +1,3 @@
+ifb chkimg("rel.bmp,1,200,500,350,560)
+	msgbox("ok")
+endif

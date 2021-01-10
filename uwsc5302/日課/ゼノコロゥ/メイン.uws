@@ -1,0 +1,105 @@
+BTN(LEFT,CLICK,805,740)
+id1 = getid(GET_ACTIVE_WIN)
+ACW(id1,0,1,500,730)
+while true
+
+while true
+r = PEEKCOLOR(172, 254, COL_R)
+if	r = 226
+	break
+endif
+wend
+
+while true
+ifb chkimg("hell.bmp")
+SLEEP(2)
+BTN(LEFT,CLICK,260,366)
+SLEEP(2)
+BTN(LEFT,CLICK,230,580)
+SLEEP(2)
+BTN(LEFT,CLICK,250,700)
+SLEEP(3)
+endif
+break
+wend
+
+
+BTN(LEFT,CLICK,260,450)
+SLEEP(1)
+BTN(LEFT,CLICK,260,400)
+SLEEP(1)
+call AP.uws
+while true
+r = PEEKCOLOR(51, 243, COL_R)
+if	r = 74
+	SLEEP(1)
+	break
+endif
+wend
+while true
+ifb chkimg("黄龍.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+	SLEEP(1)
+endif
+wend
+while true
+r = PEEKCOLOR(258, 269, COL_R)
+if	r = 202
+	SLEEP(1)
+	break
+endif
+wend
+BTN(LEFT,CLICK,240,540)
+SLEEP(1)
+BTN(LEFT,CLICK,240,500)
+while true
+r = PEEKCOLOR(24, 391, COL_R)
+if	r = 115
+	//SLEEP(1)
+	break
+endif
+wend
+BTN(LEFT,CLICK,24,390)
+
+while true
+r = PEEKCOLOR(168, 120, COL_R)
+if	r = 72
+	//SLEEP(1)
+	break
+endif
+wend
+SLEEP(3)
+//SLEEP(24)
+BTN(LEFT,CLICK,250,700)
+SLEEP(3)
+while true
+r = PEEKCOLOR(168, 120, COL_R)
+if	r = 72
+	//SLEEP(1)
+	break
+endif
+wend
+SLEEP(3)
+BTN(LEFT,CLICK,270,480)
+SLEEP(1)
+BTN(LEFT,CLICK,270,480)
+SLEEP(1)
+BTN(LEFT,CLICK,270,480)
+SLEEP(1)
+BTN(LEFT,CLICK,230,370)
+SLEEP(5)
+BTN(LEFT,CLICK,250,700)
+while true
+r = PEEKCOLOR(74, 155, COL_R)
+if	r = 91
+	//SLEEP(1)
+	break
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,250,700)
+SLEEP(3)
+wend

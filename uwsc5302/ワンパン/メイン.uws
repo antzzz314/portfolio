@@ -1,0 +1,99 @@
+while true
+for i = 1 to 3
+SENDSTR(0,"http://game.granbluefantasy.jp/#quest/assist")
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,UP)
+SLEEP(0.1)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+SLEEP(0.1)
+KBD(VK_ENTER,DOWN)
+KBD(VK_ENTER,UP)
+SLEEP(1.5)
+BTN(LEFT,CLICK,700,600)
+SLEEP(1)
+BTN(LEFT,CLICK,280,260)
+SLEEP(1)
+BTN(LEFT,CLICK,100,430)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+BTN(LEFT,CLICK,220,430)//参加
+SLEEP(1.5)
+textblock aaa
+ifb chkimg("bp.bmp")
+	BTN(LEFT,CLICK,100,510)
+	SLEEP(1)
+	BTN(LEFT,CLICK,100,470)
+	SLEEP(1)
+	BTN(LEFT,CLICK,100,540)
+	SLEEP(1)
+	BTN(LEFT,CLICK,150,500)
+endif
+endtextblock
+ifb chkimg("bp.bmp")
+	BTN(LEFT,CLICK,200,510)
+	SLEEP(0.3)
+	BTN(LEFT,CLICK,270,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,270,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,270,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,270,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,270,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,240,480)
+	SLEEP(0.1)
+	BTN(LEFT,CLICK,240,540)
+	SLEEP(1)
+	BTN(LEFT,CLICK,150,500)
+endif
+ifb chkimg("th.bmp")
+	SLEEP(6)
+	break
+endif
+ifb chkimg("kakunin.bmp")
+	break
+endif
+ifb chkimg("ok.bmp")
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	SLEEP(2)
+	while true
+	ifb chkimg("mi.bmp")
+		break 2
+	endif
+	BTN(LEFT,CLICK,250,250)
+	SLEEP(1)
+	SENDSTR(0,"http://game.granbluefantasy.jp/#quest/assist/unclaimed")
+	BTN(LEFT,CLICK,280,60)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_A,CLICK)
+	KBD(VK_CTRL,UP)
+	SLEEP(0.1)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_V,CLICK)
+	KBD(VK_CTRL,UP)
+	SLEEP(0.1)
+	KBD(VK_ENTER,DOWN)
+	KBD(VK_ENTER,UP)
+	//BTN(LEFT,CLICK,30,700)
+	SLEEP(1)
+	wend
+endif
+BTN(LEFT,CLICK,200,400)
+SLEEP(1)
+BTN(LEFT,CLICK,200,540)
+SLEEP(7)
+ifb chkimg("multi.bmp")
+	break
+endif
+BTN(LEFT,CLICK,50,500)
+SLEEP(1)
+BTN(LEFT,CLICK,260,500)
+next
+wend

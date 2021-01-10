@@ -1,0 +1,58 @@
+BTN(LEFT,CLICK,805,740)
+id1 = getid(GET_ACTIVE_WIN)
+ACW(id1,0,1,500,730)
+while true
+while true
+r = PEEKCOLOR(60, 345, COL_R)
+if	r=147
+	SLEEP(1)
+	break
+endif
+wend
+BTN(LEFT,CLICK,270,370)
+while true
+r = PEEKCOLOR(268, 411, COL_R)
+if	r=225
+	break
+endif
+wend
+BTN(LEFT,CLICK,264,420)
+SLEEP(2)//1.5
+call AP.uws
+while true
+r = PEEKCOLOR(52, 183, COL_R)
+if	r=205
+	break
+endif
+wend
+BTN(LEFT,CLICK,163,363)
+while true
+r = PEEKCOLOR(215, 544, COL_R)
+if	r=88
+	break
+endif
+wend
+BTN(LEFT,CLICK,240,540)
+call 認証.uws
+while true
+r = PEEKCOLOR(26, 392, COL_R)
+if	r=125
+	SLEEP(2)
+	break
+endif
+wend
+BTN(LEFT,CLICK,50,500)
+SLEEP(1)
+BTN(LEFT,CLICK,220,500)
+SLEEP(1)
+BTN(LEFT,CLICK,277,377)
+SLEEP(3)
+BTN(LEFT,CLICK,243,700)
+while true
+r = PEEKCOLOR(73, 148, COL_R)
+if	r=91
+	break
+endif
+wend
+BTN(LEFT,CLICK,243,700)
+wend

@@ -1,0 +1,84 @@
+id=GETID("Google Chrome","Chrome_WidgetWin_1",-1)
+//BTN(LEFT,CLICK,350,10)
+//id1 = getid(GET_ACTIVE_WIN)
+ACW(id,0,1,500,730)
+while true
+
+while true
+r = PEEKCOLOR(18, 369, COL_R)
+if r=116
+	break
+endif
+wend
+
+SLEEP(1)
+ifb chkimg("10000.bmp")
+call 交換.uws
+//break
+endif
+flag=false
+flag2=false
+agu=false
+nepu=false
+texita=false
+zepyu=false
+ifb chkimg("flag2.BMP")
+	flag2=true
+endif
+ifb chkimg("flag.BMP")
+	flag=true
+	//SCKEY(id,VK_DOWN)
+endif
+ifb chkimg("アグニス.BMP")
+	agu=true
+endif
+ifb chkimg("ネプ.BMP")
+	nepu=true
+endif
+ifb chkimg("ティタ.BMP")
+	texita=true
+endif
+ifb chkimg("ゼピュ.BMP")
+	zepyu=true
+endif
+BTN(LEFT,CLICK,160,630)
+
+while true
+r = PEEKCOLOR(203, 430, COL_R)
+if r=210
+	SLEEP(0.5)
+	break
+endif
+wend
+
+if flag=true
+	call 白虎AT.uws
+endif
+if flag2=true
+	call ネプ.uws
+endif
+ifb chkimg("1.BMP")
+	call 朱雀.uws
+endif
+ifb chkimg("2.BMP")
+	call 玄武.uws
+endif
+ifb chkimg("3.BMP")
+	call 白虎.uws
+endif
+ifb chkimg("4.BMP")//242 486 147
+	call 青竜.uws
+endif
+if agu=true
+	call アグニス2.uws
+endif
+if nepu=true
+	call ネプ2.uws
+endif
+if texita=true
+	call ティタ2.uws
+endif
+if zepyu=true
+	call ゼピュ2.uws
+endif
+wend

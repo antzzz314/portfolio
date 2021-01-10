@@ -1,0 +1,5 @@
+	BTN(LEFT,CLICK,50,500)
+	SLEEP(1.5)
+	ifb chkimg("dis.bmp")
+		msgbox("ok")	
+	endif

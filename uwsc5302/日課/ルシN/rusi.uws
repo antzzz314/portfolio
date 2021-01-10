@@ -1,0 +1,26 @@
+while true
+str = "http://game.granbluefantasy.jp/#result_multi/"
+while true
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,DOWN)
+KBD(VK_C,CLICK)
+KBD(VK_CTRL,UP)
+url = GETSTR(0)
+ifb POS(str,url)
+	break
+endif
+SLEEP(1)
+wend
+SLEEP(10)
+BTN(LEFT,CLICK,250,370)
+while true
+ifb chkimg("settei.bmp")
+	BTN(LEFT,CLICK,230,700)
+	SLEEP(3)
+	BTN(LEFT,CLICK,480,80)
+	break
+endif
+wend
+wend

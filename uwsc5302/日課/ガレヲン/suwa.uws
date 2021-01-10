@@ -1,0 +1,19 @@
+t=gettime()
+while ((gettime()-t)<=2)
+ifb chkimg("suwa.bmp")
+	BTN(LEFT,CLICK,270,500)
+	SLEEP(2)
+	ifb chkimg("cc.bmp")
+		BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	BTN(LEFT,CLICK,250,500)	
+	endif
+	ifb chkimg("koro.bmp")
+		BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+		BTN(LEFT,CLICK,220,460)
+	endif
+	SLEEP(1)
+	BTN(LEFT,CLICK,40,370)
+	SLEEP(2)
+	call guard.uws
+endif
+wend

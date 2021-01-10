@@ -1,0 +1,62 @@
+//id1 = getid(GET_ACTIVE_WIN)
+//ACW(id1,0,1,500,730)
+while true
+SLEEP(1)
+BTN(LEFT,CLICK,181,600,200)
+SLEEP(1)
+BTN(LEFT,CLICK,230,579)
+SLEEP(1.5)
+call AP.uws
+while true
+SLEEP(1)
+ifb chkimg("sere.bmp")
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,240,532)
+t=gettime()
+	while ((gettime()-t)<=4)
+	ifb chkimg("dy.bmp",1,0,111,320,685)
+	BTN(LEFT,CLICK,100,390)
+	break
+	endif
+	wend
+while true
+	ifb chkimg("revive.bmp")
+		call revive.uws
+	endif
+	ifb chkimg("revive2.bmp")
+		call revive2.uws
+	endif
+	ifb chkimg("re.bmp",1,200,500,330,570)
+	BTN(LEFT,CLICK,230,700)
+		t=gettime()
+		while ((gettime()-t)<=4)
+		ifb chkimg("dy.bmp",1,0,111,320,685)
+		BTN(LEFT,CLICK,100,390)
+		break
+		endif
+		wend
+	endif
+	str = "http://game.granbluefantasy.jp/#result_multi/"
+SLEEP(1)
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,DOWN)
+KBD(VK_C,CLICK)
+KBD(VK_CTRL,UP)
+url = GETSTR(0)
+ifb POS(str,url)
+	break
+endif
+wend
+BTN(LEFT,CLICK,230,700)
+SLEEP(3)
+BTN(LEFT,CLICK,187,80)
+SLEEP(3)
+wend

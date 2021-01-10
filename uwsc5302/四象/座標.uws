@@ -1,0 +1,5 @@
+//座標を取得するツール.uws
+for i = 0 to 100
+FUKIDASI("マウスカーソルの座標"+"x:" + G_MOUSE_X+"y:" + G_MOUSE_Y)
+sleep(1) 
+next

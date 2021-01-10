@@ -1,0 +1,15 @@
+CALL ChkImgX.uws
+
+startup_chkimgx()
+try
+	if chkimgx("event.bmp")
+		BTN(LEFT,CLICK,155,603)
+		SLEEP(1)
+		BTN(LEFT,CLICK,205,575)
+		SLEEP(2)
+		BTN(LEFT,CLICK,165,90)	
+		SLEEP(1)
+	endif
+finally
+	shutdown_chkimgx()
+endtry

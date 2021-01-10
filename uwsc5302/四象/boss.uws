@@ -1,0 +1,3 @@
+ifb chkimg("ok.bmp")
+	msgbox("ok")
+endif

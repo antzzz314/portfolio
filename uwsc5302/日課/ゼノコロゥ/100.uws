@@ -1,0 +1,54 @@
+BTN(LEFT,CLICK,805,740)
+id1 = getid(GET_ACTIVE_WIN)
+ACW(id1,0,1,500,730)
+while true
+BTN(LEFT,CLICK,260,525)
+SLEEP(3)
+BTN(LEFT,CLICK,260,574)
+SLEEP(3)
+call AP.uws
+while true
+r = PEEKCOLOR(51, 243, COL_R)
+if	r = 74
+	SLEEP(1)
+	break
+endif
+wend
+while true
+ifb chkimg("6.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+	SLEEP(1)
+endif
+wend
+SLEEP(1)
+BTN(LEFT,CLICK,240,540)
+SLEEP(1)
+BTN(LEFT,CLICK,240,500)
+SLEEP(15)
+BTN(LEFT,CLICK,24,390)
+
+while true
+r = PEEKCOLOR(64, 126, COL_R)
+if	r = 57
+	//SLEEP(1)
+	break
+endif
+wend
+SLEEP(1)
+SENDSTR(0,"http://game.granbluefantasy.jp/#quest/extra/event/2020")
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,UP)
+SLEEP(0.5)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+SLEEP(0.5)
+KBD(VK_ENTER,DOWN)
+KBD(VK_ENTER,UP)
+SLEEP(3)
+wend

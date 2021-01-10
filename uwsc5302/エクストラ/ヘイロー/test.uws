@@ -1,0 +1,3 @@
+ifb chkimg("APPP.bmp")
+	msgbox("ok")
+endif

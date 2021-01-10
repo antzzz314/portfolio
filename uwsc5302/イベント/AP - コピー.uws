@@ -1,0 +1,17 @@
+CALL ChkImgX.uws
+
+startup_chkimgx()
+try
+	if chkimgx("AP.bmp",1,100,200,300,400,1,1)
+		BTN(LEFT,CLICK,216,480)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,216,410)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,216,520)
+		SLEEP(0.6)
+		BTN(LEFT,CLICK,200,500)
+		SLEEP(0.6)
+	endif
+finally
+	shutdown_chkimgx()
+endtry

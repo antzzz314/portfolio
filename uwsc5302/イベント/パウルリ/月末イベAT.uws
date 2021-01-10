@@ -1,0 +1,45 @@
+t=GETTIME()
+while ((GETTIME()-t)<=4500)
+//for i = 1 to 200
+call イベント.uws
+BTN(LEFT,CLICK,227,510)
+SLEEP(0.8)
+BTN(LEFT,CLICK,91,466,203)
+SLEEP(1.5)//1.5
+call AP.uws
+while true
+ifb chkimg("1.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+elseif chkimg("シヴァ.bmp",1,0,111,200,685)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+else
+	KBD(VK_SPACE,CLICK)
+endif
+wend
+SLEEP(1)
+call 認証.uws
+BTN(LEFT,CLICK,240,532)
+x=gettime()
+	while ((gettime()-x)<=4)
+	ifb chkimg("dy.bmp",1,0,111,320,685)
+	BTN(LEFT,CLICK,100,390)
+	break
+	endif
+	wend
+while true
+ifb chkimg("re.bmp")
+	break
+endif
+wend
+SLEEP(0.5)
+BTN(LEFT,CLICK,187,80)
+while true
+ifb chkimg("ok.bmp")
+	break
+endif
+wend
+BTN(LEFT,CLICK,187,80)
+SLEEP(1)
+wend

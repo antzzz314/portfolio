@@ -1,0 +1,6 @@
+for i = 1 to 2
+BTN(LEFT,CLICK,76,323)
+SLEEP(0.5)
+BTN(LEFT,CLICK,270,385)
+call リヴァ.uws
+next

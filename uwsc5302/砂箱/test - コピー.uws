@@ -1,0 +1,3 @@
+ifb chkimg("tre.bmp")
+	msgbox("ok")
+endif	

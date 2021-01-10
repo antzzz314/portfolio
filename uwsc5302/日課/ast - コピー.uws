@@ -1,0 +1,68 @@
+str = "http://game.granbluefantasy.jp/#result_multi/"
+str1 = "http://game.granbluefantasy.jp/#raid_multi/"
+while true
+BTN(LEFT,CLICK,280,510)
+	while true
+		BTN(LEFT,CLICK,280,60)
+		KBD(VK_CTRL,DOWN)
+		KBD(VK_A,CLICK)
+		KBD(VK_CTRL,DOWN)
+		KBD(VK_C,CLICK)
+		KBD(VK_CTRL,UP)
+		url = GETSTR(0)
+		ifb POS(str1,url)
+			SLEEP(7)
+			BTN(LEFT,CLICK,37,380)
+			break
+		endif
+		SLEEP(1)
+	wend
+	while true
+	BTN(LEFT,CLICK,280,60)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_A,CLICK)
+	KBD(VK_CTRL,DOWN)
+	KBD(VK_C,CLICK)
+	KBD(VK_CTRL,UP)
+	url = GETSTR(0)
+	ifb POS(str,url)
+		BTN(LEFT,CLICK,230,700)
+		SLEEP(3)
+		BTN(LEFT,CLICK,480,80)
+		SLEEP(3)
+		break
+	endif
+	ifb chkimg("w.bmp")
+		BTN(LEFT,CLICK,230,700)
+		break	
+	endif
+	ifb chkimg("re.bmp",1,200,500,330,570)
+	BTN(LEFT,CLICK,230,700)
+		t=gettime()
+		//while ((gettime()-t)<=10)
+		while true
+			ifb chkimg("dy.bmp",1,0,111,320,685)
+				BTN(LEFT,CLICK,100,390)
+					break				
+				endif
+				BTN(LEFT,CLICK,280,60)
+				KBD(VK_CTRL,DOWN)
+				KBD(VK_A,CLICK)
+				KBD(VK_CTRL,DOWN)
+				KBD(VK_C,CLICK)
+				KBD(VK_CTRL,UP)
+				url = GETSTR(0)
+				ifb POS(str,url)
+				BTN(LEFT,CLICK,230,700)
+				SLEEP(3)
+				BTN(LEFT,CLICK,230,700)
+				SLEEP(3)
+				BTN(LEFT,CLICK,480,80)
+				SLEEP(3)
+				break 2
+				endif
+				SLEEP(0.1)			
+		wend
+	endif
+	wend
+wend

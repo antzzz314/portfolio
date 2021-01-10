@@ -1,0 +1,13 @@
+CALL ChkImgX.uws
+
+startup_chkimgx()
+try
+
+if chkimgx("joker.bmp")
+	msgbox("true")
+else
+	msgbox("no")
+endif
+finally
+	shutdown_chkimgx()
+endtry

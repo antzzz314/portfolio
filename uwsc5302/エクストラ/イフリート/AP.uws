@@ -1,0 +1,3 @@
+ifb chkimg("APP.bmp")
+	call aaaa.uws
+endif

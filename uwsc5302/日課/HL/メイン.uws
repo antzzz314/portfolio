@@ -1,0 +1,163 @@
+SENDSTR(0,"http://game.granbluefantasy.jp/#quest/multi/0v")
+BTN(LEFT,CLICK,280,60)
+KBD(VK_CTRL,DOWN)
+KBD(VK_A,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_CTRL,DOWN)
+KBD(VK_V,CLICK)
+KBD(VK_CTRL,UP)
+KBD(VK_ENTER,DOWN)
+KBD(VK_ENTER,UP)
+SLEEP(2)
+t = gettime()
+while ((gettime()-t)<=4)
+ifb chkimg("hl.bmp",0,0,0,800,800,1,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+SLEEP(1)
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,1,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call ティアマト.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,2,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call コロッサス.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,3,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call リヴァ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,4,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call ユグ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,5,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call シュバ.uws
+next
+for i = 1 to 2
+BTN(LEFT,CLICK,76,343)
+SLEEP(0.5)
+while true
+ifb chkimg("senhl.bmp",0,0,0,800,800,6,0)
+	break
+endif
+wend
+BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+while true
+ifb chkimg("sa.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+while true
+ifb chkimg("ok.bmp",0,0,0,800,800,1,0)
+	BTN(LEFT,CLICK,G_IMG_X,G_IMG_Y)
+	break
+endif
+wend
+SLEEP(1.5)
+call セレ.uws
+next
