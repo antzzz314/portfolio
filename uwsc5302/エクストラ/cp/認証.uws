@@ -1,4 +1,0 @@
-ifb chkimg("認証.bmp")
-	call mail.uws
-	exitexit
-endif

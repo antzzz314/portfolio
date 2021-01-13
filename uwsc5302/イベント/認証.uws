@@ -1,6 +1,0 @@
-ifb chkimg("認証.bmp")
-	while true
-	SOUND("Beep")
-	wend
-	msgbox("ok")
-endif

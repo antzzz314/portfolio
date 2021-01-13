@@ -1,7 +1,0 @@
-while true
-	ifb chkimg("rel.bmp",1,200,500,330,570)
-	BTN(LEFT,CLICK,230,700)
-	MMV(230,350)
-	SLEEP(4)
-	endif
-wend

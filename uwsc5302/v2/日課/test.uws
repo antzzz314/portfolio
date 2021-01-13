@@ -1,3 +1,0 @@
-ifb chkimg("1.bmp")
-	msgbox("ok")
-endif

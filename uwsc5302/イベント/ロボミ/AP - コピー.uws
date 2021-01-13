@@ -1,7 +1,0 @@
-ifb chkimg("APP.bmp")
-	print G_IMG_Y
-endif
- 383
-481
-422
-516

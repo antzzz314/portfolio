@@ -1,3 +1,0 @@
-ifb chkimg("APP.bmp")
-	call zzz.uws
-endif

@@ -1,6 +1,0 @@
-x = 202 // マウスカーソルのX座標
-y = 128 // マウスカーソルのY座標
-r = PEEKCOLOR(x, y, COL_R) // 赤の成分のみ取得
-print x
-print y
-PRINT "マウスカーソルの下のR成分は" + R + "です"
