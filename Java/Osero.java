@@ -22,16 +22,31 @@ class Board{
         grid[4][3] = Piece.Black;grid[4][4] = Piece.White;
     }
     boolean canPlace(Player player){
+        int count;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid.length; j++) {
                 for(Direction dir:Direction.values()){
-                    int count =reverse(player.piece, i, j, dir);
-                    if(count>=0){
-                        return true; 
-                    }
+                    count = canPlace2(player.piece, i, j, dir);
+                    if(count>0)return true;
                 }
             }
-        }return false;
+        }return false;     
+    }
+    private int canPlace2(Piece piece, int row, int col, Direction dir) {
+        int nrow = row + dir.drow;
+        int ncol = col + dir.dcol;
+        Piece next = null;
+        if((0<=nrow  && nrow<=7 && 0<=ncol && ncol<=7))
+            next = grid[row+dir.drow][col+dir.dcol];
+        if(next==null)
+            return -1;
+        if(next==piece)
+            return 0;
+        int count = canPlace2(piece,nrow,ncol,dir);            
+        if(count>=0){
+            next=piece;
+            count++;
+        }return count;
     }
     private int reverse(Piece piece,int row,int col,Direction dir){
         int nrow = row + dir.drow;
@@ -88,21 +103,40 @@ class Board{
     }
 }
 
-
 public class Osero {
     public static void main(String[] args) {
+        Player player,opponent;
         Board board = new Board();
-        Player player = new Player(Piece.White),
-               opponent = new Player(Piece.Black);
+        Scanner sc = new Scanner(System.in);
+        while (true){
+            System.out.println("黒/1か白/2かを選んで下さい");
+            int x = sc.nextInt();
+            if(x==1){
+                player = new Player(Piece.Black);
+                opponent = new Player(Piece.White);
+                break;
+            }else if(x==2){
+                player = new Player(Piece.White);
+                opponent = new Player(Piece.Black);
+                break; 
+            }
+        }  
         while (true){
             if(board.canPlace(player)){
-                int n;
+                int n; 
                 while((n=board.place(player,prompt(player,board)))<=0);
                 player.count +=n+1;
-                opponent.count-=n;                
+                opponent.count-=n;              
                 if(player.count+opponent.count==8*8 || opponent.count==0){
                     board.display();
                     System.out.println("ゲーム終了");
+                    if(player.count>opponent.count){
+                        System.out.println(player.piece+"の勝利です");
+                    }else if(player.count==opponent.count){
+                        System.out.println("引き分けです");
+                    }else{
+                        System.out.println(opponent.piece+"の勝利です");
+                    }
                     break;
                 }
             }
@@ -115,7 +149,7 @@ public class Osero {
         Scanner sc = new Scanner(System.in);
         while (true){
             board.display();
-            System.out.println("行列で入力してください　例3a");
+            System.out.println(player.piece+"の手番です行列で入力してください　例3a");
             try{
                 String str = sc.next();
                 int c1 = str.charAt(0)-'1';
