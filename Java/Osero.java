@@ -20,7 +20,6 @@ class Board{
     Board(){
         grid[3][3] = Piece.White;grid[3][4] = Piece.Black;
         grid[4][3] = Piece.Black;grid[4][4] = Piece.White;
-        //System.out.println(grid.length);
     }
     boolean canPlace(Player player){
         for (int i = 0; i < grid.length; i++) {
@@ -46,16 +45,11 @@ class Board{
             return -1;
         if(next==piece)
             return 0;
-        //System.out.println(dir);
-        int count = reverse(piece,nrow,ncol,dir);
-        //System.out.println(count+"count ");            
+        int count = reverse(piece,nrow,ncol,dir);            
         if(count>=0){
-            //System.out.print(count);
             grid[nrow][ncol]=piece;
             count++;
-            //System.out.println("nrow"+(nrow+1)+" ncol"+ncol);
         }
-        //System.out.println("a");
         return count;
     }
     int place(Player player,String position){
@@ -63,7 +57,7 @@ class Board{
             try {
                 int row = position.charAt(0)-'1';
                 int col = position.charAt(1)-'a';
-                if(grid[row][col]!=null)//もし置き場所が空白じゃなかったら
+                if(grid[row][col]!=null)
                     return -1;
                 for(Direction dir:Direction.values()){
                     int n = reverse(player.piece,row,col,dir);
@@ -74,7 +68,6 @@ class Board{
                 if(count>0)
                     grid[row][col]=player.piece;
             } catch (Exception e) {
-                //TODO: handle exception
             }return count;
     }
     void display(){
@@ -101,9 +94,6 @@ public class Osero {
         Board board = new Board();
         Player player = new Player(Piece.White),
                opponent = new Player(Piece.Black);
-        //if(board.canPlace(Player)){
-        //    System.out.println("1");
-        //}
         while (true){
             if(board.canPlace(player)){
                 int n;
@@ -130,14 +120,12 @@ public class Osero {
                 String str = sc.next();
                 int c1 = str.charAt(0)-'1';
                 int c2 = str.charAt(1)-'a';
-                //System.out.println(c1+1+" "+c2);
                 if(!(0<=c1 && c1<=7 && 0<=c2 && c2<=7)){
                     continue;
                 }else{
                     return str;
                 }   
             }catch(StringIndexOutOfBoundsException e){
-                //System.out.println("e");
             }
         }
     }
